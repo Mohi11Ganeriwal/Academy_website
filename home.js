@@ -1,107 +1,232 @@
-// ================= MOBILE MENU =================
-
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+menuBtn.addEventListener("click",()=>{
+
+navLinks.classList.toggle("show");
+
 });
 
+/* COURSES */
 
-// ================= STUDENT DATA =================
+const courses = [
 
-const students = [
+{
+image:"images/course1.png",
+title:"Computer Hardware",
+description:"Learn hardware practically"
+},
 
-    {
-        name: "Rahul Sharma",
-        image: "images/student1.png"
-    },
+{
+image:"images/course2.png",
+title:"Networking",
+description:"Learn networking & servers"
+},
 
-    {
-        name: "Priya Mehta",
-        image: "images/student2.png"
-    },
+{
+image:"images/course3.png",
+title:"Ethical Hacking",
+description:"Cybersecurity & ethical hacking"
+},
 
-    {
-        name: "Aman Verma",
-        image: "images/student3.png"
-    },
+{
+image:"images/course4.png",
+title:"DCA",
+description:"Diploma in Computer Application"
+},
 
-    {
-        name: "Sneha Jain",
-        image: "images/student4.png"
-    },
-
-    {
-        name: "Rohit Gupta",
-        image: "images/student5.png"
-    }
+{
+image:"images/course5.png",
+title:"Programming",
+description:"Learn coding & software"
+}
 
 ];
 
+const courseContainer =
+document.getElementById("courseContainer");
 
-// ================= LOAD STUDENTS =================
+courses.forEach(course=>{
 
-const studentContainer = document.getElementById("studentContainer");
+courseContainer.innerHTML += `
 
-students.forEach(student => {
+<div class="course-card fade-up">
 
-    const card = document.createElement("div");
+<img src="${course.image}" alt="">
 
-    card.classList.add("student-card");
+<h3>${course.title}</h3>
 
-    card.innerHTML = `
-    
-        <img src="${student.image}" alt="${student.name}">
-        
-        <h3>${student.name}</h3>
+<p>${course.description}</p>
 
-    `;
+</div>
 
-    studentContainer.appendChild(card);
+`;
 
 });
 
+/* STUDENTS */
 
-// ================= NAVBAR SCROLL EFFECT =================
+const students = [
 
-window.addEventListener("scroll", () => {
+{
+image:"images/student1.png",
+name:"Rahul Sharma",
+company:"TCS",
+package:"3 LPA"
+},
 
-    const navbar = document.querySelector(".navbar");
+{
+image:"images/student2.png",
+name:"Priya Verma",
+company:"Infosys",
+package:"2.8 LPA"
+},
 
-    if(window.scrollY > 50){
+{
+image:"images/student3.png",
+name:"Aman Singh",
+company:"Wipro",
+package:"3.2 LPA"
+},
 
-        navbar.style.padding = "12px 6%";
-        navbar.style.background = "rgba(255,255,255,0.98)";
-        navbar.style.backdropFilter = "blur(10px)";
+{
+image:"images/student4.png",
+name:"Neha Patel",
+company:"HCL",
+package:"2.5 LPA"
+},
 
-    }
-    else{
+{
+image:"images/student5.png",
+name:"Rohit Jain",
+company:"Capgemini",
+package:"3.5 LPA"
+}
 
-        navbar.style.padding = "18px 6%";
-        navbar.style.background = "#fff";
+];
 
-    }
+const studentContainer =
+document.getElementById("studentContainer");
+
+students.forEach(student=>{
+
+studentContainer.innerHTML += `
+
+<div class="student-card fade-up">
+
+<img src="${student.image}" alt="">
+
+<h3>${student.name}</h3>
+
+<p>${student.company}</p>
+
+<p>${student.package}</p>
+
+</div>
+
+`;
 
 });
 
+/* AUTO STUDENT SLIDER */
 
-// ================= COURSE CARD HOVER EFFECT =================
+let scrollAmount = 0;
 
-const cards = document.querySelectorAll(".course-card");
+setInterval(()=>{
 
-cards.forEach(card => {
+scrollAmount += 320;
 
-    card.addEventListener("mouseenter", () => {
+if(scrollAmount >= studentContainer.scrollWidth){
 
-        card.style.boxShadow = "0 10px 30px rgba(29,27,80,0.25)";
+scrollAmount = 0;
 
-    });
+}
 
-    card.addEventListener("mouseleave", () => {
+studentContainer.scrollTo({
 
-        card.style.boxShadow = "0 5px 20px rgba(0,0,0,0.12)";
+left:scrollAmount,
+behavior:"smooth"
 
-    });
+});
+
+},3000);
+
+/* COUNTER */
+
+const counters =
+document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+const updateCounter = () => {
+
+const target =
++counter.getAttribute("data-target");
+
+const isPercent =
+counter.classList.contains("percent");
+
+let current =
+parseInt(counter.innerText);
+
+const increment = target / 100;
+
+if(current < target){
+
+current = Math.ceil(current + increment);
+
+if(isPercent){
+
+counter.innerText = current + "%";
+
+}else{
+
+counter.innerText = current;
+
+}
+
+setTimeout(updateCounter,20);
+
+}else{
+
+if(isPercent){
+
+counter.innerText = target + "%";
+
+}else{
+
+counter.innerText = target;
+
+}
+
+}
+
+};
+
+updateCounter();
+
+});
+
+/* SCROLL ANIMATION */
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".fade-up")
+.forEach((el)=>{
+
+observer.observe(el);
 
 });
