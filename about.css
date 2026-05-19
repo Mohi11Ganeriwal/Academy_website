@@ -55,15 +55,15 @@ width:70px;
 
 .logo-section h2{
 font-size:24px;
-color:#1D1B50;
 font-weight:800;
+color:#1D1B50;
 line-height:1.1;
 }
 
 .logo-section p{
 color:#F8AE46;
-font-size:14px;
 font-weight:700;
+font-size:14px;
 }
 
 nav{
@@ -99,7 +99,6 @@ background:#F8AE46;
 border:none;
 padding:15px 28px;
 border-radius:40px;
-font-size:18px;
 font-weight:700;
 cursor:pointer;
 }
@@ -112,27 +111,26 @@ cursor:pointer;
 
 /* HERO */
 
-.teacher-hero{
+.about-hero{
 background:#1D1B50;
 padding:80px 6%;
 display:grid;
-grid-template-columns:1.2fr 1fr;
+grid-template-columns:1fr 1fr;
 align-items:center;
 gap:40px;
 }
 
-.hero-left h3{
+.hero-left h1{
+font-size:64px;
 color:white;
-font-size:42px;
 margin-bottom:20px;
 }
 
-.hero-left h1{
-color:#F8AE46;
-font-size:64px;
-line-height:1.1;
+.line{
+width:80px;
+height:4px;
+background:#F8AE46;
 margin-bottom:25px;
-font-weight:700;
 }
 
 .hero-left p{
@@ -146,11 +144,68 @@ width:100%;
 animation:float 4s ease-in-out infinite;
 }
 
-/* TEACHERS */
+/* WHO SECTION */
 
-.teachers-section{
+.who-section{
 width:90%;
-margin:60px auto;
+margin:70px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.who-image img{
+width:100%;
+border-radius:20px;
+}
+
+.who-content h2{
+font-size:42px;
+color:#1D1B50;
+margin-bottom:15px;
+}
+
+.who-content p{
+font-size:22px;
+line-height:1.8;
+}
+
+/* MISSION */
+
+.mission-section{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-bottom:70px;
+}
+
+.mission-card{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.12);
+}
+
+.mission-card h2{
+font-size:34px;
+color:#1D1B50;
+margin-bottom:15px;
+}
+
+.mission-card p{
+font-size:22px;
+line-height:1.7;
+}
+
+/* WHY */
+
+.why-section{
+width:90%;
+margin:auto;
+margin-bottom:70px;
 }
 
 .section-title{
@@ -159,67 +214,50 @@ margin-bottom:50px;
 }
 
 .section-title h2{
-font-size:40px;
+font-size:42px;
 color:#1D1B50;
 margin-bottom:10px;
 }
 
-.line{
-width:120px;
-height:4px;
-background:#F8AE46;
+.section-title .line{
 margin:auto;
 }
 
-.teachers-container{
+.why-container{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:35px;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
 }
 
-.teacher-card{
+.why-card{
 background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 5px 30px rgba(0,0,0,0.12);
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.12);
 transition:0.4s;
 }
 
-.teacher-card:hover{
+.why-card:hover{
 transform:translateY(-10px);
 }
 
-.teacher-image{
-height:380px;
-overflow:hidden;
+.why-card img{
+width:100px;
+height:100px;
+object-fit:contain;
+margin-bottom:20px;
 }
 
-.teacher-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:0.4s;
-}
-
-.teacher-card:hover img{
-transform:scale(1.08);
-}
-
-.teacher-content{
-padding:25px;
-text-align:center;
-}
-
-.teacher-content h3{
-font-size:34px;
+.why-card h3{
+font-size:28px;
 color:#1D1B50;
-margin-bottom:12px;
+margin-bottom:15px;
 }
 
-.teacher-content p{
-font-size:22px;
-color:#1D1B50;
-font-weight:600;
+.why-card p{
+font-size:20px;
+line-height:1.6;
 }
 
 /* CTA */
@@ -327,12 +365,14 @@ transform:translateY(0px);
 
 @media(max-width:1200px){
 
-.teachers-container{
-grid-template-columns:repeat(2,1fr);
+.about-hero,
+.who-section,
+.mission-section{
+grid-template-columns:1fr;
 }
 
-.teacher-hero{
-grid-template-columns:1fr;
+.why-container{
+grid-template-columns:repeat(2,1fr);
 }
 
 .cta{
@@ -375,15 +415,11 @@ display:none;
 font-size:42px;
 }
 
-.hero-left h3{
-font-size:28px;
-}
-
 .hero-left p{
 font-size:18px;
 }
 
-.teachers-container{
+.why-container{
 grid-template-columns:1fr;
 }
 

@@ -228,7 +228,6 @@ display:grid;
 grid-template-columns:1fr 1fr;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 5px 25px rgba(0,0,0,0.12);
 }
 
 .stats{
@@ -238,18 +237,11 @@ display:grid;
 grid-template-columns:repeat(5,1fr);
 padding:35px 25px;
 text-align:center;
-gap:10px;
 }
 
 .stats h3{
 font-size:30px;
-margin-bottom:8px;
-font-weight:700;
-}
-
-.stats p{
-font-size:13px;
-line-height:1.5;
+margin-bottom:10px;
 }
 
 .cta-right{
@@ -304,7 +296,7 @@ transform:translateY(-4px);
 .fade-up{
 opacity:0;
 transform:translateY(40px);
-transition:0.8s ease;
+transition:0.8s;
 }
 
 .show{
