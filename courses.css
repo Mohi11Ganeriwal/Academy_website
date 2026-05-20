@@ -62,7 +62,7 @@ line-height:1.1;
 
 .logo-section p{
 color:#F8AE46;
-font-size:14px;
+font-size:18px;
 font-weight:700;
 }
 
@@ -200,8 +200,11 @@ padding:25px;
 border-radius:18px;
 box-shadow:0 5px 20px rgba(0,0,0,0.12);
 transition:0.4s;
-}
 
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
 .course-card:hover{
 transform:translateY(-10px);
 }
@@ -223,12 +226,15 @@ margin-bottom:15px;
 .course-card p{
 font-size:16px;
 line-height:1.7;
-margin-bottom:20px;
+margin-bottom:25px;
 color:#444;
+
+min-height:20px;
 }
 
 .course-bottom{
 display:flex;
+margin-top:10px;
 justify-content:space-between;
 align-items:center;
 margin-bottom:20px;
