@@ -77,7 +77,7 @@ Computer Academy
 
 <nav id="navLinks">
 
-<a href="index.html" class="active">Home</a>
+<a href="home.php" class="active">Home</a>
 
 <a href="about.html">About Us</a>
 
@@ -304,7 +304,7 @@ View All Courses
 
 </div>
 
-<div class="students-container">
+<div class="students-container" id="studentContainer">
 
 <?php
 

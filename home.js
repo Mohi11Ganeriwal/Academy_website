@@ -66,90 +66,33 @@ courseContainer.innerHTML += `
 
 /* STUDENTS */
 
-const students = [
 
-{
-image:"images/student1.png",
-name:"Rahul Sharma",
-company:"TCS",
-package:"3 LPA"
-},
 
-{
-image:"images/student2.png",
-name:"Priya Verma",
-company:"Infosys",
-package:"2.8 LPA"
-},
+/* AUTO STUDENT SLIDER */
 
-{
-image:"images/student3.png",
-name:"Aman Singh",
-company:"Wipro",
-package:"3.2 LPA"
-},
-
-{
-image:"images/student4.png",
-name:"Neha Patel",
-company:"HCL",
-package:"2.5 LPA"
-},
-
-{
-image:"images/student5.png",
-name:"Rohit Jain",
-company:"Capgemini",
-package:"3.5 LPA"
-}
-
-];
+/* AUTO STUDENT SLIDER */
 
 const studentContainer =
 document.getElementById("studentContainer");
 
-students.forEach(student=>{
+console.log(studentContainer);
 
-studentContainer.innerHTML += `
-
-<div class="student-card fade-up">
-
-<img src="${student.image}" alt="">
-
-<h3>${student.name}</h3>
-
-<p>${student.company}</p>
-
-<p>${student.package}</p>
-
-</div>
-
-`;
-
-});
-
-/* AUTO STUDENT SLIDER */
+if(studentContainer){
 
 let scrollAmount = 0;
 
 setInterval(()=>{
 
-scrollAmount += 320;
+scrollAmount += 300;
 
-if(scrollAmount >= studentContainer.scrollWidth){
+studentContainer.scrollLeft =
+scrollAmount;
 
-scrollAmount = 0;
+console.log("sliding");
+
+},2000);
 
 }
-
-studentContainer.scrollTo({
-
-left:scrollAmount,
-behavior:"smooth"
-
-});
-
-},3000);
 
 /* COUNTER */
 

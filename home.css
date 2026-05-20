@@ -328,6 +328,7 @@ transform:translateY(-4px);
 
 .students-container{
 display:flex;
+flex-wrap: nowrap;
 gap:25px;
 overflow-x:auto;
 scroll-behavior:smooth;
@@ -381,15 +382,22 @@ margin-bottom:15px;
 }
 
 .student-img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
+width:80px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+margin:10px auto;
+display:block;
+border:3px solid #eee;
 }
 
 .company-logo{
-    width:100px;
-    margin-top:10px;
+width:40px;
+height:auto;
+margin-top:10px;
+display:block;
+margin-left:auto;
+margin-right:auto;
 }
 
 .cta{
@@ -580,5 +588,4 @@ width:100%;
 .stats{
 grid-template-columns:1fr 1fr;
 }
-
 }
