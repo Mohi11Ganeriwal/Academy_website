@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TroubleShooters Academy</title>
+<title>Troubleshooters Academy</title>
 
 <link rel="stylesheet" href="home.css">
 
@@ -29,12 +29,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <span>
 <i class="fa-solid fa-phone"></i>
-+91 1234567890
++91 9284838458
 </span>
 
 <span>
 <i class="fa-solid fa-envelope"></i>
-info@troubleshooteracademy.com
+troubleshootercomputers126@gmail.com
 </span>
 
 </div>
@@ -45,10 +45,21 @@ info@troubleshooteracademy.com
 
 <span>Offline Classes</span>
 
+<a href="https://facebook.com/yourpage" target="_blank">
 <i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/troubleshooters_academy126?igsh=MzRlODBiNWFlZA==" target="_blank">
 <i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://linkedin.com/in/yourpage" target="_blank">
 <i class="fa-brands fa-linkedin-in"></i>
+</a>
+
+<a href="https://youtube.com/@troubleshooteracademy?si=qf1XL-TsxzlA9Kwn" target="_blank">
 <i class="fa-brands fa-youtube"></i>
+</a>
 
 </div>
 
@@ -65,7 +76,7 @@ info@troubleshooteracademy.com
 <div>
 
 <h2>
-TroubleShooters <br>
+Troubleshooters <br>
 Computer Academy
 </h2>
 
@@ -92,7 +103,7 @@ Computer Academy
 </nav>
 
 <button class="enroll-btn">
-Enroll Now
+Register Now
 </button>
 
 <div class="menu-btn" id="menuBtn">
@@ -110,7 +121,7 @@ Enroll Now
 <h3>Shape Your Future with</h3>
 
 <h1>
-TroubleShooters <br>
+Troubleshooters <br>
 Computer Academy
 </h1>
 
@@ -120,17 +131,16 @@ Join us and build your bright future with industry-ready skills.
 </p>
 
 <div class="hero-buttons">
-
+<a href = "courses.html">
 <button class="explore-btn">
 Explore Courses
 </button>
-
-<button class="watch-btn">
-
-<i class="fa-solid fa-play"></i>
-
-Watch Video
-
+</a>
+ <button class="watch-btn">
+<a href ="https://youtu.be/2jGwQzJJtC0?si=9Y695MkoK7zA_QnF">
+<i class="fa-solid fa-play">
+Watch Video </i>
+</a>
 </button>
 
 </div>
@@ -283,11 +293,11 @@ Support
 
 </div>
 <div class="view-btn">
-
+<a href = "courses.html">
 <button>
 View All Courses
 </button>
-
+</a>
 </div>
 
 </section>
@@ -318,6 +328,8 @@ $conn = mysqli_connect(
 $sql = "SELECT * FROM students";
 $result = mysqli_query($conn, $sql);
 
+/* FIRST LOOP */
+
 while($row = mysqli_fetch_assoc($result))
 {
 ?>
@@ -325,8 +337,9 @@ while($row = mysqli_fetch_assoc($result))
 <div class="student-card">
 
     <img
-    src="images/<?php echo $row['image']; ?>"
-    class="student-img">
+    src="images/<?php echo !empty($row['image']) ? $row['image'] : 'default-student.png'; ?>"
+    class="student-img"
+    onerror="this.src='images/default-student.png'">
 
     <h3>
         <?php echo $row['student_name']; ?>
@@ -344,8 +357,56 @@ while($row = mysqli_fetch_assoc($result))
     </p>
 
     <img
-    src="images/<?php echo $row['company_logo']; ?>"
-    class="company-logo">
+    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'default-company.png'; ?>"
+    class="company-logo"
+    onerror="this.src='images/default-company.png'">
+
+    <h4>
+        Package:
+        <?php echo $row['package_lpa']; ?>
+    </h4>
+
+</div>
+
+<?php
+}
+
+/* RESET DATA */
+
+mysqli_data_seek($result, 0);
+
+/* SECOND LOOP FOR INFINITE SCROLL */
+
+while($row = mysqli_fetch_assoc($result))
+{
+?>
+
+<div class="student-card">
+
+    <img
+    src="images/<?php echo !empty($row['image']) ? $row['image'] : 'default-student.png'; ?>"
+    class="student-img"
+    onerror="this.src='images/default-student.png'">
+
+    <h3>
+        <?php echo $row['student_name']; ?>
+    </h3>
+
+    <p>
+        <?php echo $row['course']; ?>
+    </p>
+
+    <p>
+        Placed at
+        <strong>
+            <?php echo $row['company']; ?>
+        </strong>
+    </p>
+
+    <img
+    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'default-company.png'; ?>"
+    class="company-logo"
+    onerror="this.src='images/default-company.png'">
 
     <h4>
         Package:
@@ -425,7 +486,7 @@ while($row = mysqli_fetch_assoc($result))
 <h2>Start Your Journey Today!</h2>
 
 <p>
-Join TroubleShooters Computer Academy
+Join Troubleshooters Computer Academy
 and make your future bright.
 </p>
 

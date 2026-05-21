@@ -17,7 +17,7 @@ navLinks.classList.toggle("show");
 const courses = [
 
 {
-image:"images/basic-computer.png",
+image:"images/computer.png",
 title:"Basic Computer",
 description:"Learn computer fundamentals, MS Office and internet skills.",
 duration:"3 Months",
