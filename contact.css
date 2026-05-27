@@ -13,7 +13,7 @@ overflow-x:hidden;
 /* ================= TOP BAR ================= */
 
 .top-bar{
-background:#402A6D;
+background:#1D1B50;
 color:white;
 padding:8px 6%;
 display:flex;
@@ -22,11 +22,58 @@ align-items:center;
 font-size:14px;
 }
 
-.top-left,
+.top-left{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
 .top-right{
 display:flex;
-gap:25px;
 align-items:center;
+gap:18px;
+color:white;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right a{
+width:20px;
+height:20px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+
+color:white ;
+}
+
+.top-right a:visited{
+color:white ;
+}
+
+.top-right a i{
+font-size:15px ;
+color:white ;
+transition:0.3s;
+}
+
+.top-right a:hover i{
+color:#F8AE46 ;
 }
 
 /* ================= NAVBAR ================= */
@@ -226,6 +273,8 @@ margin-bottom:4px;
 font-size:15px;
 line-height:1.5;
 color:#333;
+overflow-wrap:anywhere;
+word-break:break-word;
 }
 
 /* ================= RIGHT SIDE ================= */

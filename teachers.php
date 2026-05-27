@@ -84,14 +84,20 @@ Computer Academy
 <a href="about.html">About Us</a>
 <a href="courses.html">Courses</a>
 <a href="facilities.html">Facilities</a>
-<a href="teachers.html" class="active">Teachers</a>
+<a href="teachers.php" class="active">Teachers</a>
 <a href="contact.html">Contact</a>
+
+<div class="language-box">
+    <div id="google_translate_element"></div>
+</div>
 
 </nav>
 
+<a href="login.php">
 <button class="enroll-btn">
 Register Now
 </button>
+</a>
 
 <div class="menu-btn" id="menuBtn">
 <i class="fa-solid fa-bars"></i>
@@ -118,6 +124,11 @@ gain knowledge and achieve your career goals.
 
 </div>
 
+<div class="hero-right">
+
+<img src="images/teacher-hero.png" alt="">
+
+</div>
 
 </section>
 
@@ -133,7 +144,73 @@ gain knowledge and achieve your career goals.
 
 </div>
 
-<div class="teachers-container" id="teachersContainer">
+<?php
+
+$conn = mysqli_connect(
+    "localhost",
+    "root",
+    "",
+    "troubleshooters_db"
+);
+
+$sql = "SELECT * FROM teachers";
+$result = mysqli_query($conn, $sql);
+
+?>
+
+<div class="teachers-container">
+
+<?php
+
+$conn = mysqli_connect(
+    "localhost",
+    "root",
+    "",
+    "troubleshooters_db"
+);
+
+$sql = "SELECT * FROM teachers";
+$result = mysqli_query($conn, $sql);
+
+?>
+
+<div class="teachers-container">
+
+<?php
+while($row = mysqli_fetch_assoc($result))
+{
+?>
+
+    <div class="teacher-card">
+
+        <div class="teacher-image">
+
+            <img
+            src="uploads/<?php echo !empty($row['image']) ? $row['image'] : 'default-teacher.png'; ?>"
+            alt=""
+            onerror="this.src='images/default-teacher.png'">
+
+        </div>
+
+        <div class="teacher-content">
+
+            <h3>
+                <?php echo $row['teacher_name']; ?>
+            </h3>
+
+            <p>
+                <?php echo $row['subject']; ?>
+            </p>
+
+        </div>
+
+    </div>
+
+<?php
+}
+?>
+
+</div>
 
 </div>
 
@@ -146,28 +223,49 @@ gain knowledge and achieve your career goals.
 <div class="stats">
 
 <div>
-<h3 class="counter" data-target="1000">0</h3>
+
+<h3 class="counter" data-target="1000">
+0
+</h3>
+
 <p>Students Trained</p>
+
 </div>
 
 <div>
+
 <h3>Free</h3>
+
 <p>Laptop <br> Available</p>
+
 </div>
 
 <div>
-<h3 class="counter" data-target="100">0%</h3>
+
+<h3 class="counter percent" data-target="100">
+0%
+</h3>
+
 <p>Placement Support</p>
+
 </div>
 
 <div>
+
 <h3>2-3LPA</h3>
+
 <p>Average Package</p>
+
 </div>
 
 <div>
-<h3 class="counter" data-target="100">0%</h3>
+
+<h3 class="counter percent" data-target="100">
+0%
+</h3>
+
 <p>Practical Learning</p>
+
 </div>
 
 </div>
@@ -181,19 +279,40 @@ gain knowledge and achieve your career goals.
 <h2>Start Your Journey Today!</h2>
 
 <p>
-Join The Trouble Shooter Computer Academy and make your future bright.
+Join The Trouble Shooter Computer Academy
+and make your future bright.
 </p>
 
 </div>
 
+<a href="contact.html">
+
 <button>Contact Us</button>
+
+</a>
 
 </div>
 
 </section>
 
-<script src="teachers.js"></script>
+<script src="about.js"></script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{
+pageLanguage: 'en',
+includedLanguages: 'en,hi,mr,te,ta,gu,bn,pa,kn,ml',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+},
+'google_translate_element'
+);
+}
+</script>
+
+<script type="text/javascript"
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 </body>
-
 </html>

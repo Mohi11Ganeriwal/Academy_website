@@ -1,4 +1,4 @@
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
 
 const menuBtn =
 document.getElementById("menuBtn");
@@ -6,13 +6,53 @@ document.getElementById("menuBtn");
 const navLinks =
 document.getElementById("navLinks");
 
+if(menuBtn){
+
 menuBtn.addEventListener("click",()=>{
 
 navLinks.classList.toggle("show");
 
 });
 
-/* ABOUT CONTENT */
+}
+
+/* ================= ABOUT IMAGES ================= */
+
+const aboutImages = {
+
+heroImage:
+"images/about-hero.png",
+
+aboutMainImage:
+"images/about-main.png"
+
+};
+
+/* ================= LOAD HERO IMAGE ================= */
+
+const heroImage =
+document.getElementById("heroImage");
+
+if(heroImage){
+
+heroImage.src =
+aboutImages.heroImage;
+
+}
+
+/* ================= LOAD MAIN IMAGE ================= */
+
+const aboutMainImage =
+document.getElementById("aboutMainImage");
+
+if(aboutMainImage){
+
+aboutMainImage.src =
+aboutImages.aboutMainImage;
+
+}
+
+/* ================= ABOUT CONTENT ================= */
 
 const aboutContent = `
 TroubleShooters Academy was started in April 2022
@@ -30,22 +70,41 @@ We are committed to providing the best learning environment,
 expert guidance and placement support.
 `;
 
-document.getElementById("aboutText")
-.innerText = aboutContent;
+const aboutText =
+document.getElementById("aboutText");
 
-/* MISSION */
+if(aboutText){
 
-document.getElementById("missionText")
-.innerText =
+aboutText.innerText =
+aboutContent;
+
+}
+
+/* ================= MISSION ================= */
+
+const missionText =
+document.getElementById("missionText");
+
+if(missionText){
+
+missionText.innerText =
 "To provide affordable and practical computer education that helps students develop real-world technical and professional skills.";
 
-/* VISION */
+}
 
-document.getElementById("visionText")
-.innerText =
+/* ================= VISION ================= */
+
+const visionText =
+document.getElementById("visionText");
+
+if(visionText){
+
+visionText.innerText =
 "To become a trusted computer academy that empowers students through quality education, innovation and career opportunities.";
 
-/* WHY CHOOSE */
+}
+
+/* ================= WHY CHOOSE DATA ================= */
 
 const whyData = [
 
@@ -75,8 +134,12 @@ desc:"100% placement support for deserving students."
 
 ];
 
+/* ================= LOAD WHY CARDS ================= */
+
 const whyContainer =
 document.getElementById("whyContainer");
+
+if(whyContainer){
 
 whyData.forEach(item=>{
 
@@ -96,17 +159,21 @@ whyContainer.innerHTML += `
 
 });
 
-/* COUNTER */
+}
+
+/* ================= COUNTER ================= */
 
 const counters =
 document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
+counter.innerText = "0";
+
 const updateCounter = () => {
 
 const target =
-+counter.getAttribute("data-target");
+Number(counter.getAttribute("data-target"));
 
 const isPercent =
 counter.classList.contains("percent");
@@ -114,19 +181,28 @@ counter.classList.contains("percent");
 let current =
 parseInt(counter.innerText);
 
-const increment = target / 100;
+const increment =
+Math.ceil(target / 100);
 
 if(current < target){
 
-current = Math.ceil(current + increment);
+current += increment;
+
+if(current > target){
+
+current = target;
+
+}
 
 if(isPercent){
 
-counter.innerText = current + "%";
+counter.innerText =
+current + "%";
 
 }else{
 
-counter.innerText = current;
+counter.innerText =
+current;
 
 }
 
@@ -136,11 +212,13 @@ setTimeout(updateCounter,20);
 
 if(isPercent){
 
-counter.innerText = target + "%";
+counter.innerText =
+target + "%";
 
 }else{
 
-counter.innerText = target;
+counter.innerText =
+target;
 
 }
 
@@ -152,7 +230,7 @@ updateCounter();
 
 });
 
-/* ANIMATION */
+/* ================= ANIMATION ================= */
 
 const observer =
 new IntersectionObserver((entries)=>{

@@ -6,11 +6,75 @@ document.getElementById("menuBtn");
 const navLinks =
 document.getElementById("navLinks");
 
+if(menuBtn){
+
 menuBtn.addEventListener("click",()=>{
 
 navLinks.classList.toggle("show");
 
 });
+
+}
+
+/* ================= HERO DATA ================= */
+
+const courseHero = {
+
+title1:
+"Our Popular",
+
+title2:
+"Courses",
+
+subtitle:
+"Join our industry-oriented courses designed to build practical skills and boost your career.",
+
+image:
+"images/courses-hero.png"
+
+};
+
+/* ================= LOAD HERO CONTENT ================= */
+
+const heroTitle1 =
+document.getElementById("heroTitle1");
+
+const heroTitle2 =
+document.getElementById("heroTitle2");
+
+const heroSubtitle =
+document.getElementById("heroSubtitle");
+
+const heroImage =
+document.getElementById("heroImage");
+
+if(heroTitle1){
+
+heroTitle1.innerText =
+courseHero.title1;
+
+}
+
+if(heroTitle2){
+
+heroTitle2.innerText =
+courseHero.title2;
+
+}
+
+if(heroSubtitle){
+
+heroSubtitle.innerText =
+courseHero.subtitle;
+
+}
+
+if(heroImage){
+
+heroImage.src =
+courseHero.image;
+
+}
 
 /* ================= COURSES DATA ================= */
 
@@ -81,6 +145,8 @@ document.getElementById("coursesContainer");
 
 function displayCourses(filteredCourses){
 
+if(!coursesContainer) return;
+
 coursesContainer.innerHTML = "";
 
 filteredCourses.forEach(course=>{
@@ -104,9 +170,11 @@ Duration :
 
 </div>
 
-<button>
+<a href="login.php">
+<button class="enroll-btn">
 Try Demo
 </button>
+</a>
 
 </div>
 
@@ -175,7 +243,7 @@ displayCourses(filteredCourses);
 
 });
 
-/* ================= COUNTER FIX ================= */
+/* ================= COUNTER ================= */
 
 const counters =
 document.querySelectorAll(".counter");

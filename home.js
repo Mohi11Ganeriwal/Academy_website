@@ -12,31 +12,31 @@ navLinks.classList.toggle("show");
 const courses = [
 
 {
-image:"images/course1.png",
+image:"images/hardware.png",
 title:"Computer Hardware",
 description:"Learn hardware practically"
 },
 
 {
-image:"images/course2.png",
+image:"images/network.png",
 title:"Networking",
 description:"Learn networking & servers"
 },
 
 {
-image:"images/course3.png",
+image:"images/hacking.png",
 title:"Ethical Hacking",
 description:"Cybersecurity & ethical hacking"
 },
 
 {
-image:"images/course4.png",
+image:"images/dca.png",
 title:"DCA",
 description:"Diploma in Computer Application"
 },
 
 {
-image:"images/course5.png",
+image:"images/computer.png",
 title:"Programming",
 description:"Learn coding & software"
 }

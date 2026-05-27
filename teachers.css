@@ -13,7 +13,7 @@ overflow-x:hidden;
 /* TOP BAR */
 
 .top-bar{
-background:#402A6D;
+background:#1D1B50;
 color:white;
 padding:8px 6%;
 display:flex;
@@ -22,11 +22,58 @@ align-items:center;
 font-size:14px;
 }
 
-.top-left,
+.top-left{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
 .top-right{
 display:flex;
-gap:25px;
 align-items:center;
+gap:18px;
+color:white;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right a{
+width:20px;
+height:20px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+
+color:white ;
+}
+
+.top-right a:visited{
+color:white ;
+}
+
+.top-right a i{
+font-size:15px ;
+color:white ;
+transition:0.3s;
+}
+
+.top-right a:hover i{
+color:#F8AE46 ;
 }
 
 /* NAVBAR */
@@ -171,56 +218,129 @@ font-size:24px;
 line-height:1.7;
 }
 
-.hero-right img{
-width:100%;
-animation:float 4s ease-in-out infinite;
+
+/* TEACHERS */
+
+/* TEACHERS */
+
+.teachers-section{
+width:95%;
+margin:80px auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:52px;
+color:#1D1B50;
+margin-bottom:12px;
+font-weight:800;
+}
+
+.line{
+width:140px;
+height:5px;
+background:#F8AE46;
+margin:auto;
+border-radius:10px;
 }
 
 /* TEACHERS */
 
 .teachers-section{
-width:90%;
-margin:60px auto;
+width:95%;
+margin:80px auto;
+position:relative;
 }
+
+/* TITLE */
 
 .section-title{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 .section-title h2{
-font-size:40px;
+font-size:50px;
 color:#1D1B50;
 margin-bottom:10px;
+font-weight:800;
 }
 
 .line{
-width:120px;
-height:4px;
+width:140px;
+height:5px;
 background:#F8AE46;
 margin:auto;
+border-radius:10px;
 }
+
+/* BUTTONS */
+
+.teacher-slider-buttons{
+display:flex;
+justify-content:flex-end;
+gap:15px;
+margin-bottom:25px;
+}
+
+.teacher-slider-buttons button{
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#1D1B50;
+color:white;
+font-size:28px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.teacher-slider-buttons button:hover{
+background:#F8AE46;
+color:black;
+transform:scale(1.08);
+}
+
+/* CONTAINER */
 
 .teachers-container{
-display:grid;
-grid-template-columns:repeat(3,1fr);
+display:flex;
 gap:35px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding:10px;
+scrollbar-width:none;
 }
 
+.teachers-container::-webkit-scrollbar{
+display:none;
+}
+
+/* CARD */
+
 .teacher-card{
+min-width:360px;
+max-width:360px;
 background:white;
-border-radius:20px;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 5px 30px rgba(0,0,0,0.12);
-transition:0.4s;
+box-shadow:0 8px 30px rgba(0,0,0,0.12);
+transition:0.4s ease;
+flex-shrink:0;
 }
 
 .teacher-card:hover{
 transform:translateY(-10px);
 }
 
+/* IMAGE */
+
 .teacher-image{
-height:380px;
+height:320px;
 overflow:hidden;
 }
 
@@ -228,12 +348,15 @@ overflow:hidden;
 width:100%;
 height:100%;
 object-fit:cover;
-transition:0.4s;
+display:block;
+transition:0.5s;
 }
 
 .teacher-card:hover img{
 transform:scale(1.08);
 }
+
+/* CONTENT */
 
 .teacher-content{
 padding:25px;
@@ -243,7 +366,8 @@ text-align:center;
 .teacher-content h3{
 font-size:34px;
 color:#1D1B50;
-margin-bottom:12px;
+margin-bottom:10px;
+font-weight:800;
 }
 
 .teacher-content p{

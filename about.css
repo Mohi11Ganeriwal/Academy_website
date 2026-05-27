@@ -13,7 +13,7 @@ overflow-x:hidden;
 /* TOP BAR */
 
 .top-bar{
-background:#402A6D;
+background:#1D1B50;
 color:white;
 padding:8px 6%;
 display:flex;
@@ -22,11 +22,58 @@ align-items:center;
 font-size:14px;
 }
 
-.top-left,
+.top-left{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
 .top-right{
 display:flex;
-gap:25px;
 align-items:center;
+gap:18px;
+color:white;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.top-right span{
+color:white;
+}
+
+.top-right a{
+width:20px;
+height:20px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+
+color:white ;
+}
+
+.top-right a:visited{
+color:white ;
+}
+
+.top-right a i{
+font-size:15px ;
+color:white ;
+transition:0.3s;
+}
+
+.top-right a:hover i{
+color:#F8AE46 ;
 }
 
 /* NAVBAR */
@@ -172,34 +219,78 @@ line-height:1.7;
 
 .hero-right img{
 width:100%;
-animation:float 4s ease-in-out infinite;
 }
 
 /* WHO SECTION */
 
 .who-section{
+
 width:90%;
-margin:70px auto;
+
+margin:80px auto;
+
 display:grid;
+
 grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+
+gap:60px;
+
+align-items:stretch;
+
+}
+
+.who-image{
+
+height:100%;
+
 }
 
 .who-image img{
+
 width:100%;
-border-radius:20px;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:25px;
+
+display:block;
+
+}
+
+.who-content{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+height:100%;
+
 }
 
 .who-content h2{
+
 font-size:42px;
+
 color:#1D1B50;
-margin-bottom:15px;
+
+margin-bottom:25px;
+
 }
 
 .who-content p{
+
 font-size:22px;
-line-height:1.8;
+
+line-height:2;
+
+color:#222;
+
+margin-bottom:25px;
+
 }
 
 /* MISSION */

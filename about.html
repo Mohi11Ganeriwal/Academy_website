@@ -44,7 +44,7 @@ troubleshootercomputers126@gmail.com
 <span>Online Classes</span>
 <span>Offline Classes</span>
 
-<a href="https://facebook.com/yourpage" target="_blank">
+<a href="https://www.facebook.com/share/18e5PvgyS9/" target="_blank">
 <i class="fa-brands fa-facebook-f"></i>
 </a>
 
@@ -91,14 +91,21 @@ Computer Academy
 <a href="about.html" class="active">About Us</a>
 <a href="courses.html">Courses</a>
 <a href="facilities.html">Facilities</a>
-<a href="teachers.html">Teachers</a>
+<a href="teachers.php">Teachers</a>
 <a href="contact.html">Contact</a>
+
+<div class="language-box">
+    <div id="google_translate_element"></div>
+</div>
+
 
 </nav>
 
+<a href="login.php">
 <button class="enroll-btn">
 Register Now
 </button>
+</a>
 
 <div class="menu-btn" id="menuBtn">
 
@@ -130,7 +137,7 @@ a successful career.
 
 <!-- IMAGE SPACE -->
 
-<img src="images/about-hero.png" alt="">
+<img id="heroImage" src="" alt="">
 
 </div>
 
@@ -144,7 +151,7 @@ a successful career.
 
 <!-- IMAGE SPACE -->
 
-<img src="images/about-main.png" alt="">
+<img id="aboutMainImage" src="" alt="">
 
 </div>
 
@@ -275,15 +282,33 @@ and make your future bright.
 
 </div>
 
-<button>
-Contact Us
-</button>
+<a href="contact.html">
 
+<button>Contact Us</button>
+
+</a>
 </div>
 
 </section>
 
 <script src="about.js"></script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{
+pageLanguage: 'en',
+includedLanguages: 'en,hi,mr,te,ta,gu,bn,pa,kn,ml',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+},
+'google_translate_element'
+);
+}
+</script>
+
+<script type="text/javascript"
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 </body>
 </html>

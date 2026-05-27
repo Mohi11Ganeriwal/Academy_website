@@ -19,25 +19,25 @@ const contactData = [
 {
 icon:"fa-solid fa-phone",
 title:"Call Us",
-info:"+91 1234567890"
+info:"+91 9284838458, +91 9630445126"
 },
 
 {
 icon:"fa-solid fa-envelope",
 title:"Email Us",
-info:"troubleshooter@gmail.com"
+info:"troubleshootercomputers126@gmail.com"
 },
 
 {
 icon:"fa-solid fa-location-dot",
 title:"Visit Us",
-info:"123 Academy Road, City, State-000000"
+info:"In front of Reliance Petrol Pump, Khan Computers, Daloda, District Mandsaur (M.P.)"
 },
 
 {
 icon:"fa-solid fa-clock",
 title:"Working Hours",
-info:"Mon-Sat : 9AM - 7PM"
+info:"Mon-Sun : 10AM - 6PM"
 }
 
 ];

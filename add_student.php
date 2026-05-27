@@ -77,12 +77,12 @@ required>
 <label>Student Image</label>
 <input type="file"
 name="student_image"
-required>
+>
 
 <label>Company Logo</label>
 <input type="file"
 name="company_logo"
-required>
+>
 
 <button type="submit">
 Save Student

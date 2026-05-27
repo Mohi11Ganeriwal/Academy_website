@@ -45,7 +45,7 @@ troubleshootercomputers126@gmail.com
 
 <span>Offline Classes</span>
 
-<a href="https://facebook.com/yourpage" target="_blank">
+<a href="https://www.facebook.com/share/18e5PvgyS9/" target="_blank">
 <i class="fa-brands fa-facebook-f"></i>
 </a>
 
@@ -96,15 +96,20 @@ Computer Academy
 
 <a href="facilities.html">Facilities</a>
 
-<a href="teachers.html">Teachers</a>
+<a href="teachers.php">Teachers</a>
 
 <a href="contact.html">Contact</a>
 
-</nav>
+<div class="language-box">
+    <div id="google_translate_element"></div>
+</div>
 
+</nav>
+<a href="login.php">
 <button class="enroll-btn">
 Register Now
 </button>
+</a>
 
 <div class="menu-btn" id="menuBtn">
 <i class="fa-solid fa-bars"></i>
@@ -136,12 +141,17 @@ Join us and build your bright future with industry-ready skills.
 Explore Courses
 </button>
 </a>
- <button class="watch-btn">
-<a href ="https://youtu.be/2jGwQzJJtC0?si=9Y695MkoK7zA_QnF">
-<i class="fa-solid fa-play">
-Watch Video </i>
+
+<a href="https://youtu.be/2jGwQzJJtC0?si=9Y695MkoK7zA_QnF"
+target="_blank"
+class="watch-btn">
+
+<i class="fa-solid fa-play"></i>
+
+Watch Video
+
 </a>
-</button>
+
 
 </div>
 
@@ -281,11 +291,11 @@ Support
 
 <section class="courses-section">
 
-<div class="section-title">
+<div class="section-title center">
 
-<div class="line"></div>
+    <h2>Our Popular Courses</h2>
 
-<h2>Our Popular Courses</h2>
+    <div class="line"></div>
 
 </div>
 
@@ -307,10 +317,10 @@ View All Courses
 <section class="students-section">
 
 <div class="section-title center">
+    
+    <h2>Our Students, Our Pride</h2>
 
-<div class="line"></div>
-
-<h2>Our Students, Our Pride</h2>
+    <div class="line"></div>
 
 </div>
 
@@ -357,9 +367,9 @@ while($row = mysqli_fetch_assoc($result))
     </p>
 
     <img
-    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'default-company.png'; ?>"
+    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'company-image.png'; ?>"
     class="company-logo"
-    onerror="this.src='images/default-company.png'">
+    onerror="this.src='images/company-image.png'">
 
     <h4>
         Package:
@@ -404,9 +414,9 @@ while($row = mysqli_fetch_assoc($result))
     </p>
 
     <img
-    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'default-company.png'; ?>"
+    src="images/<?php echo !empty($row['company_logo']) ? $row['company_logo'] : 'company-image.png'; ?>"
     class="company-logo"
-    onerror="this.src='images/default-company.png'">
+    onerror="this.src='images/company-image.png'">
 
     <h4>
         Package:
@@ -492,13 +502,34 @@ and make your future bright.
 
 </div>
 
+<a href="contact.html">
+
 <button>Contact Us</button>
+
+</a>
 
 </div>
 
 </section>
 
 <script src="home.js"></script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{
+pageLanguage: 'en',
+includedLanguages: 'en,hi,mr,te,ta,gu,bn,pa,kn,ml',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+},
+'google_translate_element'
+);
+}
+</script>
+
+<script type="text/javascript"
+src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 
 </body>
 
