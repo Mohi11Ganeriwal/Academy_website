@@ -55,3 +55,9 @@ Troubleshooters/
 ├── teachers.html
 ├── contact.html
 │
+├── css files
+├── js files
+├── images/
+└── database files
+```
+
