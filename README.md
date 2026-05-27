@@ -109,13 +109,13 @@ http://localhost/TroubleShooters/
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](images/homepage.png)
+![Home Page](websiteimages/homepage.png)
 
 ### Courses Page
-![Courses Page](images/courses.png)
+![Courses Page](websiteimages/courses.png)
 
 ### Teachers Page
-![Teachers Page](images/teachers.png)
+![Teachers Page](websiteimages/teachers.png)
 
 
 
