@@ -108,11 +108,8 @@ http://localhost/TroubleShooters/
 
 ## 📸 Screenshots
 
-
-## 📸 Screenshots
-
 ### Home Page
-![Home Page](images/home.png)
+![Home Page](images/homepage.png)
 
 ### Courses Page
 ![Courses Page](images/courses.png)
