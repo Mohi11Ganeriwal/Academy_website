@@ -8,6 +8,8 @@ The Troubleshooters Academy Website is designed to help educational institutes e
 
 This project was developed using frontend and backend web technologies and deployed locally using XAMPP.
 
+---
+
 ## ✨ Features
 
 * Responsive Home Page
@@ -20,6 +22,8 @@ This project was developed using frontend and backend web technologies and deplo
 * Dynamic PHP Integration
 * MySQL Database Connectivity
 * Clean and Modern UI
+
+---
 
 ## 🛠️ Technologies Used
 
@@ -43,6 +47,8 @@ This project was developed using frontend and backend web technologies and deplo
 * Git & GitHub
 * VS Code
 
+---
+
 ## 📂 Project Structure
 
 ```bash
@@ -61,3 +67,89 @@ Troubleshooters/
 └── database files
 ```
 
+---
+
+## ⚙️ Installation & Setup
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-username/TroubleShooters.git
+```
+
+### Step 2: Move Project to XAMPP htdocs Folder
+
+```bash
+C:\xampp\htdocs\
+```
+
+### Step 3: Start XAMPP
+
+Start:
+
+* Apache
+* MySQL
+
+### Step 4: Import Database
+
+1. Open phpMyAdmin
+2. Create a database
+3. Import the SQL file
+
+### Step 5: Run the Project
+
+Open browser and run:
+
+```bash
+http://localhost/TroubleShooters/
+```
+
+---
+
+## 📸 Screenshots
+
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](images/home.png)
+
+### Courses Page
+![Courses Page](images/courses.png)
+
+### Teachers Page
+![Teachers Page](images/teachers.png)
+
+
+---
+
+## 🎯 Objectives
+
+* Build a responsive educational website
+* Improve user interaction and navigation
+* Create a clean and professional academy platform
+* Implement frontend + backend integration
+
+---
+
+## 📈 Future Improvements
+
+* Student Login System
+* Online Course Enrollment
+* Admin Dashboard
+* Attendance Management
+* Payment Gateway Integration
+* AI-based Student Assistance
+
+---
+
+## 👨‍💻 Developer
+
+Developed by Mohi Ganeriwal and Mahak Dhakad.
+
+---
+
+## 📄 License
+
+This project is developed for educational and client purposes.
+All rights reserved.
